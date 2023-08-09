@@ -1,0 +1,28 @@
+.container {
+  .trusted-company-container {
+    width:100vw;
+    margin-top: 45%;
+    h1 {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 2.5rem;
+      padding:10px;
+      margin-top: 20px;
+    }
+
+    span{
+        color:#007bff;
+    }
+    .trusted-company-img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      img {
+        width: 11rem;
+        padding: 20px;
+      }
+    }
+  }
+}

@@ -19,7 +19,9 @@ const LPHeroSection = () => {
             <h1 className='hero-heading'><span className='hero-heading-prime'>Prime</span>Program is now Open for Enrollments</h1>
             <h2 className='hero-head-two'>The Ultimate Guide To Ace SDE Interviews.</h2>
             <h3 className='hero-subheading'>A Program to make you Job Ready for your Dream Company 🚀</h3>
-            <button className='btn-primary enroll-btn'>Enroll Now</button>
+            <button className='btn-primary enroll-btn'>Enroll Now
+            {/* <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></svg> */}
+            </button>
             <p className='hero-para'>This batch starts from <span className='hero-para-sub'>30th August</span></p>
         </div>
         <div className='hero-section-right'>
@@ -34,6 +36,8 @@ const LPHeroSection = () => {
         </div>   
            
         </div>
+
+        
     </div>
   )
 }

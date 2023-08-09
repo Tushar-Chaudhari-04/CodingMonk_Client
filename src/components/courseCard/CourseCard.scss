@@ -1,0 +1,46 @@
+.course-card{
+    margin-top:50px;
+    width:350px;
+    border:.5px solid #e2d3d3;
+    border-radius:15px;
+    padding:5px;
+    .course-card-Img{
+        width:fit-content;
+        padding:5px;
+        img{
+            border-radius: 15px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .course-pricing{
+        //padding: 5px;
+        .course-mrp{
+            color:#b7b7b7;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: line-through;
+        }
+        
+        .course-saleprice{
+            color:#212121;
+            font-size:35px;
+            font-weight: 700;
+
+            span{
+             font-size: 25px;
+             font-weight: 600;    
+            }
+        }
+
+        .course-btn{
+            width:260px;
+            margin: 15px;
+            background-color:#006d77;
+        }
+    }
+
+    .course-highlights{
+        padding:5px;
+    }
+}
