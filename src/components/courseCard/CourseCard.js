@@ -3,27 +3,26 @@ import "./CourseCard.scss";
 import PrimeProgram from "../../assets/Prime Program.png";
 import {BsCurrencyRupee} from "react-icons/bs"
 
-const CourseCard = () => {
+const CourseCard = (data) => {
   return (
     <div className="course-card">
       <div className="course-card-Img">
-        <img src={PrimeProgram} alt="PrimeProgram" />
+        <img src={data.data.courseImg} alt={data.data.courseName} />
       </div>
       <div className="course-pricing">
-        <p className="course-mrp"><BsCurrencyRupee/> 7,800/-</p>
+        <h2 className="course-name">{data.data.courseName}</h2>
+        <p className="course-mrp"><BsCurrencyRupee/> {data.data.courseMRP}</p>
         <p className="course-saleprice">
-          <span style={{color:"#757575"}}><BsCurrencyRupee/></span> 6,580
+          <span style={{color:"#757575"}}><BsCurrencyRupee/></span> {data.data.courseSP}
         </p>
-        <p className="course-emi">or EMI <BsCurrencyRupee/>1,097/mon*</p>
+        <p className="course-emi">or EMI <BsCurrencyRupee/>{data.data.courseEMI}</p>
         <button className="btn-primary course-btn">Start Learning</button>
       </div>
       <div className="course-highlights">
       <h3 style={{margin:"10px"}}>Key Features</h3>
-        <p>30+ Hrs LIVE Problem Solving Classes</p>
-        <p> 60+ Hrs Online Content</p>
-        <p>400+ Handpicked Problems</p>
-        <p> 5 Months Program</p>
-        <p> 2 Years Access</p>
+      {data.data.courseFeatures.map(data=>(
+        <p>{data}</p>
+      ))}
       </div>
     </div>
   );
