@@ -6,7 +6,7 @@ import FAQsData from "../../CodingBaba Database/FAQsData";
 const FAQS = () => {
   return (
     <div className="container">
-      <div className="faqs">
+      <div className="faqs" id="faqs">
         <h2 style={{ textAlign: "center" }}>Frequently Asked <span style={{color:"#007bff"}}>Questions</span></h2>
         <div className="faq-card-section">
           {FAQsData.map(data=>(

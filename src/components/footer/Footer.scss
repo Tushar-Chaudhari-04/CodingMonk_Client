@@ -1,11 +1,12 @@
 .footer {
   width: 100vw;
   height: 70vh;
-  margin-top: 170%;
+  margin-top:240%;
   background-color: #030138;
   justify-content: center;
   align-items: center;
   padding:5px;
+  
   .footer-heading {
     text-align: center;
     color: #fff;
@@ -27,20 +28,28 @@
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
+    
     .footer-tail-left{
         
         p{
             color:#fff;
             margin-top: -15px;
+            
         }
     }
     .footer-tail-center{
+      p{
+        color:hsla(0,0%,87%,.592);
+      }
         h5{
             color:#fff;
             margin-bottom: 10px;
         }
     }
     .footer-tail-right{
+      p{
+        color:hsla(0,0%,87%,.592);
+      }
        h5{
         color:#fff;
         margin-bottom: 10px;

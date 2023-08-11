@@ -15,7 +15,7 @@ const LPHeroSection = () => {
   return (
     <div className='container'>
         <div className='hero-section-left'>
-            <h1>Learn with Tushar Chaudhari</h1>
+            {/* <h1>Learn with Tushar Chaudhari</h1> */}
             <h1 className='hero-heading'><span className='hero-heading-prime'>Prime</span>Program is now Open for Enrollments</h1>
             <h2 className='hero-head-two'>The Ultimate Guide To Ace SDE Interviews.</h2>
             <h3 className='hero-subheading'>A Program to make you Job Ready for your Dream Company 🚀</h3>

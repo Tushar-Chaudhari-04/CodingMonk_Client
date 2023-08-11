@@ -3,6 +3,9 @@
     justify-content: space-around;
     align-items: center;
     margin:10px auto;
+    position: fixed;
+    top:0;
+     width: 100%;
 .navbar-left{
     .navbar-logo{
          width:100px;
@@ -17,12 +20,12 @@
 
 .navbar-center{
     .cb-tabs{
-        display: inline-flex;
-        justify-content: space-between;    
-    
+        display:flex; 
         li{
-            padding:20px;
-            font-weight: 500;
+            padding: 1rem;
+            .tab1{
+                color:#000;
+            }
         }
     }
     

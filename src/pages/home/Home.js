@@ -8,6 +8,7 @@ import ProgramBenefits from '../../components/program-benefits/ProgramBenefits'
 import TopTech from '../../components/top-tech-section/TopTech'
 import Courses from '../../components/courses/Courses'
 import FAQS from '../../components/faqs/FAQS'
+import Testimonials from '../../components/testimonials/Testimonials'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <ProgramBenefits/>
         <TopTech/>
         <Courses/>
+        <Testimonials/>
         <FAQS/>
         <Footer/>
     </>
