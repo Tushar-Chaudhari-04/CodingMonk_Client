@@ -2,8 +2,10 @@ import React from 'react'
 import "./Courses.scss"
 import CourseCard from '../courseCard/CourseCard'
 import CourseData from "../../CodingBaba Database/CoursesData"
+import { useNavigate } from 'react-router-dom'
 
 const Courses = () => {
+  
   return (
     <div className='container'>
         <div className='courses' id="course">

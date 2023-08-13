@@ -9,6 +9,7 @@ import TopTech from '../../components/top-tech-section/TopTech'
 import Courses from '../../components/courses/Courses'
 import FAQS from '../../components/faqs/FAQS'
 import Testimonials from '../../components/testimonials/Testimonials'
+import About from '../../components/about/About'
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <TopTech/>
         <Courses/>
         <Testimonials/>
+        <About/>
         <FAQS/>
         <Footer/>
     </>

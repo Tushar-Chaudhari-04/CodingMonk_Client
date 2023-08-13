@@ -2,7 +2,7 @@ import React from 'react'
 import "./CourseMainInfoCard.scss"
 
 const CourseMainInfoCard = (data) => {
-  console.log("topic",data.data.topicHeading);
+  console.log("topic 321",data.data);
   return (
     <div className='coursemaininfocard'>
         <div className='curriculam-head'>

@@ -5,28 +5,25 @@ import CourseData from "../../CodingBaba Database/CoursesData";
 import { BsStarFill } from "react-icons/bs";
 import { BsStarHalf } from "react-icons/bs";
 import CourseMainInfoCard from "../coursemaininfocard/CourseMainInfoCard";
-import CourseCurriculum from "../../CodingBaba Database/CourseCurriculumData"
 
-const CourseMainSection = () => {
-  const courseCardData = CourseData[1];
+const CourseMainSection = (course) => {
+  console.log("course 123",course.course)
+
+  const courseCardData = CourseData.filter(data=>(data.course===course.course))[0];
+  console.log("courseCardData",courseCardData)
   return (
     <div className="container">
       <div className="coursemainsection">
         <div className="coursemainhero">
           <div className="coursemainhero-left">
-            <h4>Welcome to @supreme-dev Family</h4>
-            <h1>Data Structures & Algorithms BootCamp @Supreme-2.0</h1>
+            <h4>{courseCardData.courseHeading}</h4>
+            <h1>{courseCardData.courseSubHeading}</h1>
             <p>
-              A comprehensive program that covers the fundamentals of data
-              structures and algorithms. It includes lectures and exercises to
-              help students design and implement efficient solutions. This
-              course is suitable for beginners and experienced programmers and
-              aims to prepare students for technical interviews and placement
-              exams.
+             {courseCardData.courseDetail}
             </p>
             <p>
               Rating: 4.9 <BsStarFill color="#FFA41B" />{" "}
-              <BsStarFill color="#FFA41B" /> <BsStarFill color="#FFA41B" />{" "}
+              <BsStarFill color="#FFA41B" /> <BsStarFill color="#FFA41B" />
               <BsStarFill color="#FFA41B" /> <BsStarHalf color="#FFA41B" />
             </p>
           </div>
@@ -39,7 +36,7 @@ const CourseMainSection = () => {
           <h1>Structured Curriculum Vetted By Industry Experts</h1>
         <div className="course-main-info-section">
           
-            {CourseCurriculum.map(data=>(
+            {courseCardData.courseCurriculum.map(data=>(
               <CourseMainInfoCard data={data}/>
             ))}
           
