@@ -141,6 +141,9 @@ const Navbar = () => {
           <li>
             <a className="tab1" href="#faqs">FAQs</a>
           </li>
+          {/* <li style={{color:"#000"}}>
+            <Link to="/checkout">Checkout</Link>
+          </li> */}
         </ul>
       </div>
 

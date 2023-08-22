@@ -10,8 +10,10 @@ import Courses from '../../components/courses/Courses'
 import FAQS from '../../components/faqs/FAQS'
 import Testimonials from '../../components/testimonials/Testimonials'
 import About from '../../components/about/About'
+import { useSelector } from 'react-redux'
 
 const Home = () => {
+ 
   return (
     <>
         <Navbar/>

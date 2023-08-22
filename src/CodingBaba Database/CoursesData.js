@@ -7,8 +7,9 @@ const CourseData=[
         course:"mern-fullstack-course",
         courseName:"MERN FullStack Web Development",
         courseMRP:"7,800/-",
-        courseSP:"5988",
+        courseSP:5988,
         courseEMI:"998/mon*",
+        buyFlag:false,
         courseFeatures:[
             "No Prerequisite Required",
             "150 Hours On Demand Video",
@@ -62,8 +63,9 @@ const CourseData=[
         course:"dsa-prime-2.0",
         courseName:"DSA Prime 2.0",
         courseMRP:"7,800/-",
-        courseSP:"6,580",
+        courseSP:6580,
         courseEMI:"1,097/mon*",
+        buyFlag:false,
         courseFeatures:[
             "30+ Hrs LIVE Problem Solving Classes",
             "60+ Hrs Online Content",

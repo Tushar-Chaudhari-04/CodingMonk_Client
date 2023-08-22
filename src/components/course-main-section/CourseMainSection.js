@@ -11,6 +11,8 @@ const CourseMainSection = (course) => {
 
   const courseCardData = CourseData.filter(data=>(data.course===course.course))[0];
   console.log("courseCardData",courseCardData)
+  console.log("courseCardData.buyFlag",courseCardData.buyFlag)
+  courseCardData.buyFlag=true;
   return (
     <div className="container">
       <div className="coursemainsection">
@@ -37,7 +39,7 @@ const CourseMainSection = (course) => {
         <div className="course-main-info-section">
           
             {courseCardData.courseCurriculum.map(data=>(
-              <CourseMainInfoCard data={data}/>
+              <CourseMainInfoCard key={data.id} data={data}/>
             ))}
           
         </div>
