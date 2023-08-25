@@ -1,8 +1,18 @@
 import React from "react";
 import "./Checkout.scss";
-import PrimeProgram from "../../assets/Prime Program.png";
+import {ImCross} from "react-icons/im"
+import { useDispatch } from "react-redux";
+import { removeItemFromCart } from "../../redux/slice/CartSlice";
 
 const Checkout = (props) => {
+  const dispatch=useDispatch();
+  const productData=props.data;
+  console.log("props.data;",props.data)
+  const removeItemFun=()=>{
+    console.log("click")
+    dispatch(removeItemFromCart(productData))
+  }
+
   return (
     <div className="checkout-card">
       <div className="product-data">
@@ -14,6 +24,7 @@ const Checkout = (props) => {
       <div className="product-price">
         <h3>₹ {props.data.spPrice}</h3>
       </div>
+      <ImCross className="remove-btn" onClick={removeItemFun}/>
     </div>
   );
 };

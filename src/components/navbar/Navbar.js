@@ -8,9 +8,30 @@ import {
   useRoutes,
   Routes,
   Route,
+  useNavigate,
 } from "react-router-dom";
+import { BsFillCartFill } from "react-icons/bs";
+import { ACCESS_TOKEN, USER, getItem, removeItem } from "../../utils/localstoragemanager";
+import { useSelector } from "react-redux";
+import { AiOutlineLogout } from "react-icons/ai";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const user = useSelector((state) => state?.UserReducer?.getMyInfo);
+  console.log("user slice data 123", user);
+
+  const handleCartFun = () => {
+    navigate("/checkout");
+  };
+
+  const handleLogout=()=>{
+    console.log("logout")
+    removeItem(USER);
+    removeItem(ACCESS_TOKEN);
+    navigate("/login");
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -127,29 +148,54 @@ const Navbar = () => {
       <div className="navbar-center">
         <ul className="cb-tabs">
           <li>
-            <Link className="tab1" to="/courses">Courses</Link>
+            <Link className="tab1" to="/courses">
+              Courses
+            </Link>
           </li>
           <li>
-            <a className="tab1" href="#course">Course</a>
+            <a className="tab1" href="#course">
+              Course
+            </a>
           </li>
           <li>
-            <a className="tab1" href="#about">About</a>
+            <a className="tab1" href="#about">
+              About
+            </a>
           </li>
           <li>
-            <a className="tab1" href="#testimonials">Testimonials</a>
+            <a className="tab1" href="#testimonials">
+              Testimonials
+            </a>
           </li>
           <li>
-            <a className="tab1" href="#faqs">FAQs</a>
+            <a className="tab1" href="#faqs">
+              FAQs
+            </a>
           </li>
-          {/* <li style={{color:"#000"}}>
-            <Link to="/checkout">Checkout</Link>
-          </li> */}
         </ul>
       </div>
 
       <div className="navbar-right">
-        <button className="btn-primary login-btn">Login</button>
-        <button className="btn-primary enroll-btn">Enroll Now</button>
+        {!user?.firstName && (
+          <>
+            <button className="btn-primary login-btn">
+              <Link to={"/login"}>Login</Link>
+            </button>
+            <button className="btn-primary enroll-btn">
+              <Link to={"/register"}>Register</Link>
+            </button>
+          </>
+        )}
+
+        {user?.firstName && (
+          <>
+            <div className="user-data">
+              <h3>Welcome {user?.firstName}</h3>
+              <BsFillCartFill className="cart-btn" onClick={handleCartFun} />
+              <AiOutlineLogout onClick={handleLogout} style={{ fontSize: "1.5rem", color: "red" }} />
+            </div>
+          </>
+        )}
       </div>
     </nav>
   );

@@ -1,7 +1,8 @@
 .checkout-card {
    display: flex;
    justify-content: space-between;
-  .product-data {
+    
+   .product-data {
       display: flex;
       padding:20px;
     .product-img-main {
@@ -20,7 +21,14 @@
   }
 
   .product-price{
+    // width:20px;
       margin-top:25px;
-      margin-right: 50px;
+      //margin-right: 20px;
+  }
+
+  .remove-btn{
+    //padding:5px;
+    margin-top:25px;
+    margin-right: 15px;
   }
 }

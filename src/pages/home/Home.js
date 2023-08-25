@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Home.scss"
 import Navbar from '../../components/navbar/Navbar'
 import LPHeroSection from '../../components/lp-hero-section/LPHeroSection'
@@ -10,10 +10,16 @@ import Courses from '../../components/courses/Courses'
 import FAQS from '../../components/faqs/FAQS'
 import Testimonials from '../../components/testimonials/Testimonials'
 import About from '../../components/about/About'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import CheckoutScetion from '../checkout-section/CheckoutSection'
+import { getMyProfile } from '../../redux/slice/UserSlice';
 
 const Home = () => {
- 
+  const dispatch=useDispatch();
+  useEffect(() => {
+    dispatch(getMyProfile());
+  }, [])
+  
   return (
     <>
         <Navbar/>

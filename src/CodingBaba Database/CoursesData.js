@@ -5,7 +5,7 @@ const CourseData=[
         id:1,
         courseImg:MERNProgram,
         course:"mern-fullstack-course",
-        courseName:"MERN FullStack Web Development",
+        courseName:"MERN FullStack",
         courseMRP:"7,800/-",
         courseSP:5988,
         courseEMI:"998/mon*",

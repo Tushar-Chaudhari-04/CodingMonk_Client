@@ -12,6 +12,14 @@ const CourseCard = (data) => {
   const cartData = useSelector((state) => state?.CartReducer?.cart);
   console.log("cartData ", cartData);
   //
+  const handlebuyNowFun=()=>{
+    dispatch(addToCart(data.data)) &&
+    navigate("/checkout")
+  }
+  const handleCourseFun=()=>{
+    navigate(`/courses/${data.data.course}`);
+  }
+
   return (
     <div className="course-card">
       <div className="course-card-Img">
@@ -36,10 +44,7 @@ const CourseCard = (data) => {
           <>
             <button
               className="btn-primary course-btn"
-              onClick={() => {
-                dispatch(addToCart(data.data)) &&
-                navigate("/checkout")
-              }}
+              onClick={handlebuyNowFun}
             >
               Buy Now
             </button>
@@ -47,7 +52,7 @@ const CourseCard = (data) => {
         ) : (
           <button
             className="btn-primary course-btn"
-            onClick={() => navigate(`/courses/${data.data.course}`)}
+            onClick={handleCourseFun}
           >
             Start Learning
           </button>

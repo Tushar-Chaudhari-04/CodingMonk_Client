@@ -1,0 +1,38 @@
+.container {
+    .login {
+      border:1px solid #000;
+      border-radius: 20px;
+      width:550px;
+      height:300px;
+      padding: 30px;
+      transform: translate(55%, 0%);
+      
+      h2{
+          margin-bottom: 10px;
+      }
+      .login-input {
+          display: flex;
+          flex-direction: column;
+  
+          .form-label {
+            margin: 5px;
+            padding: 6px;
+          }
+          .form-control {
+            width: 90%;
+            padding: 8px;
+            border: 1.5px solid #000;
+            border-radius: 5px;
+          }
+        }
+  
+        .submit-btn {
+          justify-content: center;
+          align-items: center;
+          width: 250px;
+          margin-top: 10px;
+          margin-left: 90px;
+          padding: 12px;
+        }
+      }
+    }

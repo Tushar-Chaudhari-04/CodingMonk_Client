@@ -44,6 +44,21 @@
        
     }
 
+    .user-data{
+        display:flex;
+        text-align: center;
+        //margin: 10px 15px 0 0;
+        justify-content: center;
+        align-items: center;
+        gap:15px;
+    }
+    .cart-btn{
+        width:25px;
+        height:25px;
+        margin:10px;
+        color: var(--btn-primary-color);
+    }
+
     .login-btn:hover{
         background-color: #dd3f71;
     }
