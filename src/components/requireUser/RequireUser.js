@@ -7,7 +7,6 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 const RequireUser = () => {
     const user=getItem(USER);
-    console.log("user",user);
 
     return (
     <>

@@ -11,7 +11,6 @@ const LPHeroSection = () => {
     const day=currDate.getDate();
     const month=currDate.getMonth();
     const mon=currDate.getMonth();
-    console.log(currDate,day,month,mon)
   return (
     <div className='container'>
         <div className='hero-section-left'>

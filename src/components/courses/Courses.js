@@ -9,7 +9,6 @@ const Courses = () => {
   
   const cartData=useSelector(state=>state?.CartReducer?.cart);
   useEffect(() => {
-    console.log("cartData at Courses",cartData);
   }, [cartData]);
   
   return (

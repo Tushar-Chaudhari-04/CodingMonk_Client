@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom'
 
 const CourseSection = () => {
   const params=useParams();
-  console.log("params",params,params.course)
   return (
         <div className='course-section'>
             <Navbar />

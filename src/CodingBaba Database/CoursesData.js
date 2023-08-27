@@ -1,5 +1,9 @@
 import PrimeProgram from "../assets/Prime Program.png";
 import MERNProgram from "../assets/MERN Img.jpg";
+
+
+//https://res.cloudinary.com/dchyp1crz/image/upload/v1693054878/Coding%20Shuttle/MERN_Img_cviicw.png
+//https://res.cloudinary.com/dchyp1crz/image/upload/v1693054866/Coding%20Shuttle/Prime_Program_olue9x.png
 const CourseData=[
     {
         id:1,

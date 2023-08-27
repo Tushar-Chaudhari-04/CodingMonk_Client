@@ -1,5 +1,7 @@
 import {createSlice} from "@reduxjs/toolkit"
+import {useSelector} from "react-redux"
 
+//const user=useSelector(state=>state.UserReducer.user);
 const cartSlice=createSlice({
     name:"cartSlice",
     initialState:{
@@ -7,7 +9,6 @@ const cartSlice=createSlice({
     },
     reducers:{
         addToCart:(state,action)=>{
-            console.log("product data",action.payload);
             var product=action.payload;
             const currentItem=product?{
                 id:product?.id,
@@ -15,21 +16,17 @@ const cartSlice=createSlice({
                 name:product?.courseName,
                 image:product?.courseImg,
                 mrpPrice:product?.courseMRP,
-                spPrice:product?.courseSP
+                spPrice:product?.courseSP,
+                email:product?.userData?.email
                 }:action.payload;
-                console.log("currentItem 1234",currentItem);
-                const index=state?.cart?.findIndex(item=>item.key===currentItem.key);
-                console.log("index",index);
+                const index=state?.cart?.findIndex(item=>item.key===currentItem.key && item.email===product?.userData?.email);
                 if(index===-1){
                     state.cart.push({...currentItem});
-                    console.log("second",currentItem);
                 }
         },
         removeItemFromCart:(state,action)=>{
             const productData=action.payload;
-            console.log("remove productData",productData)
             const index=state?.cart?.findIndex(item=>(item.key===productData.key));
-            console.log("remove id",index);
             if(index===-1) return;
             state.cart=state.cart.filter(item=>(item.key!==productData.key));
         },

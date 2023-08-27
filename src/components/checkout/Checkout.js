@@ -3,15 +3,20 @@ import "./Checkout.scss";
 import {ImCross} from "react-icons/im"
 import { useDispatch } from "react-redux";
 import { removeItemFromCart } from "../../redux/slice/CartSlice";
+import {loadStripe} from '@stripe/stripe-js';
 
-const Checkout = (props) => {
+// Make sure to call `loadStripe` outside of a component’s render to avoid
+// recreating the `Stripe` object on every render.
+const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
+
+const Checkout = (props) => { 
   const dispatch=useDispatch();
   const productData=props.data;
-  console.log("props.data;",props.data)
   const removeItemFun=()=>{
-    console.log("click")
     dispatch(removeItemFromCart(productData))
   }
+
+  
 
   return (
     <div className="checkout-card">

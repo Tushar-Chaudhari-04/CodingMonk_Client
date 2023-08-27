@@ -7,11 +7,8 @@ import { BsStarHalf } from "react-icons/bs";
 import CourseMainInfoCard from "../coursemaininfocard/CourseMainInfoCard";
 
 const CourseMainSection = (course) => {
-  console.log("course 123",course.course)
 
   const courseCardData = CourseData.filter(data=>(data.course===course.course))[0];
-  console.log("courseCardData",courseCardData)
-  console.log("courseCardData.buyFlag",courseCardData.buyFlag)
   courseCardData.buyFlag=true;
   return (
     <div className="container">

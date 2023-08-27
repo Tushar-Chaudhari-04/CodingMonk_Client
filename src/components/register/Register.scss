@@ -1,13 +1,14 @@
 .container {
   .register {
-    border:1px solid #000;
-    border-radius: 20px;
+    //border:0.5px solid #000;
+    //border-radius: 20px;
     width:550px;
     height:560px;
-    padding: 30px;
+    padding: 35px;
     transform: translate(55%, -10%);
-    
+    margin-top: -30px;
     h2{
+      text-align: center;
         margin-bottom: 10px;
     }
     .register-input {
@@ -30,8 +31,9 @@
         justify-content: center;
         align-items: center;
         width: 250px;
-        margin-top: 10px;
-        margin-left: 90px;
+        height:45px;
+        margin-top: 15px;
+        margin-left: 110px;
         padding: 12px;
       }
     }

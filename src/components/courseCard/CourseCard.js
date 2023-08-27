@@ -1,26 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CourseCard.scss";
 import PrimeProgram from "../../assets/Prime Program.png";
 import { BsCurrencyRupee } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, resetCart } from "../../redux/slice/CartSlice";
+import CheckoutScetion from "../../pages/checkout-section/CheckoutSection";
 
 const CourseCard = (data) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const [openCart,setOpenCart]=useState(false);
+
   const cartData = useSelector((state) => state?.CartReducer?.cart);
-  console.log("cartData ", cartData);
-  //
+  const userData = useSelector((state) => state?.UserReducer?.getMyInfo);
+  
+  const userCartData=cartData.filter(item=>(item.email===userData.email))
+
   const handlebuyNowFun=()=>{
-    dispatch(addToCart(data.data)) &&
-    navigate("/checkout")
+    dispatch(addToCart({...data.data,userData})) &&
+    //navigate("/")
+      setOpenCart(!openCart);
   }
   const handleCourseFun=()=>{
     navigate(`/courses/${data.data.course}`);
   }
 
   return (
+    <>
     <div className="course-card">
       <div className="course-card-Img">
         <img src={data.data.courseImg} alt={data.data.courseName} />
@@ -65,6 +73,14 @@ const CourseCard = (data) => {
         ))}
       </div>
     </div>
+    {userCartData.length>0 && openCart && (
+      <CheckoutScetion
+        onClose={() => {
+          setOpenCart(false);
+        }}
+      />
+    )}
+    </>
   );
 };
 /*

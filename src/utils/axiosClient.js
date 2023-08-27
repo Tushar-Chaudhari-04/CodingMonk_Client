@@ -1,13 +1,12 @@
 import axios from "axios";
 import { ACCESS_TOKEN, getItem } from "./localstoragemanager";
 
-const origin = process.env.REACT_APP_SERVER_BASE_URL;
+let origin = `${process.env.REACT_APP_SERVER_BASE_URL}`;
 
 if (process.env.NODE_ENV === "production") {
   origin = process.env.REACT_APP_SERVER_BASE_URL;
 }
-console.log("origin axios", origin);
-console.log("process.env.NODE_ENV", process.env.NODE_ENV);
+
 
 const config = {
     headers: {
@@ -19,15 +18,14 @@ const config = {
   };
 
 export const axiosClient = axios.create({
-  baseURL: "http://localhost:4000",
-  config  
+  baseURL: origin,
+  config
 });
 
 
 //Request and Response Interceptors
 
 axiosClient.interceptors.request.use(request=>{
-  console.log("request",request);
   const accessToken=getItem(ACCESS_TOKEN);
   request.headers["Authorization"]=`Bearer ${accessToken}`
   return request;

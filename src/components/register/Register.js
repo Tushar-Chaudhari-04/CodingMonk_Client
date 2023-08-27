@@ -3,6 +3,8 @@ import "./Register.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import { axiosClient } from "../../utils/axiosClient";
 import axios from "axios";
+import { Button, Input, message } from "antd";
+import { LockOutlined, UserOutlined,MobileOutlined } from "@ant-design/icons";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -18,16 +20,13 @@ const Register = () => {
 
   const handleDataChange = (e) => {
     e.preventDefault();
-    console.log("user",user)
     const {name, value} = e.target;
     console.log("name,value", name, value);
     setUser({...user,[name]:value});
-    console.log("user", user);
   };
 
   const handleSubmit =async (e) => {
     e.preventDefault();
-    console.log("user data", user);
   
     if(user.password===user.confirmPassword){
       const userData=await axiosClient.post("/auth/register",
@@ -38,7 +37,6 @@ const Register = () => {
         password:user.password.toString(),
         mobileNo:user.mobileNo.toString(),
       });
-      console.log("userData",userData)
       userData.data.statusCode===(200 || 201)?navigate("/login"):navigate("/register");
     }else{
       alert("Please use same password for confirm password :)");
@@ -51,24 +49,28 @@ const Register = () => {
         <h2>Register to Coding Shuttle</h2>
         <div className="register-input">
           <label htmlFor="exampleInputFirstName" className="form-label">
-            FirstName
+            First Name
           </label>
-          <input
+          <Input
             type="text"
             name="firstName"
-            className="form-control"
+            placeholder="First Name"
+            className="input-field"
+            //className="form-control"
             id="exampleInputFirstName"
             onChange={handleDataChange}
           />
         </div>
         <div className="register-input">
           <label htmlFor="exampleInputLastName" className="form-label">
-            LastName
+            Last Name
           </label>
-          <input
+          <Input
             type="text"
             name="lastName"
-            className="form-control"
+            placeholder="Last Name"
+            className="input-field"
+            //className="form-control"
             id="exampleInputLastName"
             onChange={handleDataChange}
           />
@@ -77,13 +79,16 @@ const Register = () => {
           <label htmlFor="exampleInputEmail1" className="form-label">
             Email address
           </label>
-          <input
+          <Input
             type="email"
             name="email"
-            className="form-control"
+            placeholder="Email Address"
+            className="input-field"
+            //className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             onChange={handleDataChange}
+            prefix={<UserOutlined/>}
           />
         </div>
 
@@ -91,12 +96,14 @@ const Register = () => {
           <label htmlFor="exampleInputPassword1" className="form-label">
             Password
           </label>
-          <input
-            type="password"
+          <Input.Password
+            placeholder="Passowrd"
             name="password"
-            className="form-control"
+            className="input-field"
+            //className="form-control"
             id="exampleInputPassword1"
             onChange={handleDataChange}
+            prefix={<LockOutlined className="site-form-item-icon"/>}
           />
         </div>
 
@@ -104,12 +111,15 @@ const Register = () => {
           <label htmlFor="exampleInputPassword2" className="form-label">
             Confirm Password
           </label>
-          <input
+          <Input.Password
+          placeholder="Confirm Password"
             type="password"
             name="confirmPassword"
-            className="form-control"
+            className="input-field"
+            //className="form-control"
             id="exampleInputPassword2"
             onChange={handleDataChange}
+            prefix={<LockOutlined className="site-form-item-icon"/>}
           />
         </div>
 
@@ -117,21 +127,24 @@ const Register = () => {
           <label htmlFor="exampleInputMobNo" className="form-label">
             Mobile Number
           </label>
-          <input
+          <Input
             type="number"
             name="mobileNo"
-            className="form-control"
+            placeholder="Mobile Number"
+            className="input-field"
+            //className="form-control"
             id="exampleInputMobNo"
             onChange={handleDataChange}
+            prefix={<MobileOutlined />}
           />
         </div>
-        <button
+        <Button
           onClick={handleSubmit}
           type="submit"
           className="btn-primary submit-btn"
         >
           Submit
-        </button>
+        </Button>
       </div>
     </div>
   );

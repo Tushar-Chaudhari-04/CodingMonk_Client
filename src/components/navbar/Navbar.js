@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.scss";
 import CodingBabaLogo from "../../assets/CodingMonk.PNG";
 import {
@@ -14,26 +14,45 @@ import { BsFillCartFill } from "react-icons/bs";
 import { ACCESS_TOKEN, USER, getItem, removeItem } from "../../utils/localstoragemanager";
 import { useSelector } from "react-redux";
 import { AiOutlineLogout } from "react-icons/ai";
+import Checkout from "../checkout/Checkout";
+import CheckoutScetion from "../../pages/checkout-section/CheckoutSection";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [colorChange,setColorChange]=useState(false);
+  const [openCart, setOpenCart] = useState(false);
+
+  const userData = useSelector((state) => state?.UserReducer?.getMyInfo);
+  const cartData = useSelector((state) => state?.CartReducer?.cart);
+  const userCartData=cartData.filter(item=>(item.email===userData.email))
+  const noOfCartItem=userCartData.length;
+
+  const handleColorChange=()=>{
+    if(window.scrollY>=80){
+      setColorChange(true);
+    }else{
+      setColorChange(false);
+    }
+  }
+
+  window.addEventListener("scroll",handleColorChange);
 
   const user = useSelector((state) => state?.UserReducer?.getMyInfo);
-  console.log("user slice data 123", user);
 
   const handleCartFun = () => {
     navigate("/checkout");
   };
 
   const handleLogout=()=>{
-    console.log("logout")
     removeItem(USER);
     removeItem(ACCESS_TOKEN);
     navigate("/login");
   }
 
+
   return (
-    <nav className="navbar">
+    <>
+    <nav className="navbar" style={{backgroundColor:colorChange?"#fff":""}}>
       <div className="navbar-left">
         <Link to="/">
           <svg
@@ -147,11 +166,11 @@ const Navbar = () => {
       </div>
       <div className="navbar-center">
         <ul className="cb-tabs">
-          <li>
+          {/* <li>
             <Link className="tab1" to="/courses">
               Courses
             </Link>
-          </li>
+          </li> */}
           <li>
             <a className="tab1" href="#course">
               Course
@@ -191,13 +210,26 @@ const Navbar = () => {
           <>
             <div className="user-data">
               <h3>Welcome {user?.firstName}</h3>
-              <BsFillCartFill className="cart-btn" onClick={handleCartFun} />
-              <AiOutlineLogout onClick={handleLogout} style={{ fontSize: "1.5rem", color: "red" }} />
+              <div className="cart-item"  onClick={() => {
+                setOpenCart(!openCart);
+              }}>
+              <BsFillCartFill className="cart-btn"/>
+              <p className="item-count">{noOfCartItem}</p>
+              </div>
+              <AiOutlineLogout onClick={handleLogout} style={{ fontSize: "1.8rem", color: "red",fontWeight:"500" }} />
             </div>
           </>
         )}
       </div>
     </nav>
+    {noOfCartItem>0 && openCart && (
+      <CheckoutScetion
+        onClose={() => {
+          setOpenCart(false);
+        }}
+      />
+    )}
+    </>
   );
 };
 
