@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3d3dc21b.css",
+    "main.js": "/static/js/main.b2fb0b7c.js",
+    "static/media/LP-Hero-Img.svg": "/static/media/LP-Hero-Img.b5cb887c796ee4266bb74427f512afb9.svg",
+    "static/media/anuj-bhaiya.webp": "/static/media/anuj-bhaiya.63a6af52ee6f42718d62.63a6af52ee6f42718d62.webp",
+    "static/media/MERN Img.jpg": "/static/media/MERN Img.2a7a16bc015cf5094bbb.jpg",
+    "static/media/pagenotfound.png": "/static/media/pagenotfound.af53d1200c9700655ff0.png",
+    "static/media/Prime Program.png": "/static/media/Prime Program.174a6bade4bf4558e5e7.png",
+    "static/media/Soham Samanta.png": "/static/media/Soham Samanta.e9029dfd8cc98689172c.e9029dfd8cc98689172c.png",
+    "static/media/Harsh Patel.png": "/static/media/Harsh Patel.3e5126e89ab5d4d294b0.png",
+    "static/media/Sujay KS.png": "/static/media/Sujay KS.6985383b4161c134e189.6985383b4161c134e189.png",
+    "static/media/oracle.webp": "/static/media/oracle.6e911e7d6c83a7e2df12.6e911e7d6c83a7e2df12.webp",
+    "static/media/adobe.webp": "/static/media/adobe.c6a586981b3695d680df.c6a586981b3695d680df.webp",
+    "static/media/atlassian.webp": "/static/media/atlassian.f7c278ba26ae9a73b184.f7c278ba26ae9a73b184.webp",
+    "static/media/microsoft.webp": "/static/media/microsoft.4d55c9d64bfffa379ce3.4d55c9d64bfffa379ce3.webp",
+    "static/media/paytm.webp": "/static/media/paytm.cad9089c9d97f44973fd.cad9089c9d97f44973fd.webp",
+    "static/media/Laptop.webp": "/static/media/Laptop.57f38a6dbe33f179caa2.webp",
+    "static/media/mobile.webp": "/static/media/mobile.cfbe46b38bd9f306a571.webp",
+    "static/media/ProgressImg.webp": "/static/media/ProgressImg.ca2285e9c2bda9046f22.webp",
+    "static/media/amazon.webp": "/static/media/amazon.0c3e0f6fb281de5d9536.0c3e0f6fb281de5d9536.webp",
+    "static/media/CodingMonk.PNG": "/static/media/CodingMonk.9d416f4346e221803880.PNG",
+    "static/media/Vaibhav Atray.webp": "/static/media/Vaibhav Atray.76152caf3118dcb1b8a4.76152caf3118dcb1b8a4.webp",
+    "static/media/Akhilesh Pal.webp": "/static/media/Akhilesh Pal.e2691204421926868d89.e2691204421926868d89.webp",
+    "static/media/Shubham Kumar.webp": "/static/media/Shubham Kumar.9a5dba62d21be3ee2fa6.9a5dba62d21be3ee2fa6.webp",
+    "index.html": "/index.html",
+    "main.3d3dc21b.css.map": "/static/css/main.3d3dc21b.css.map",
+    "main.b2fb0b7c.js.map": "/static/js/main.b2fb0b7c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3d3dc21b.css",
+    "static/js/main.b2fb0b7c.js"
+  ]
+}
