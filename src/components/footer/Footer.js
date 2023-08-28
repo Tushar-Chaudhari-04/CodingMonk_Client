@@ -10,7 +10,8 @@ const Footer = (data) => {
       <h1 className="footer-heading">
         Skills Gets You The Job, Not Your Degree.
       </h1>
-      <button className="btn-primary footer-btn">Apply Now</button>
+      <button className="btn-primary footer-btn" id="#course">
+      <a href="#course">Apply Now</a></button>
       <div className="footer-tail">
         <div className="footer-tail-left">
           <Link to="/">

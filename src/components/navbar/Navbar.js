@@ -214,7 +214,7 @@ const Navbar = () => {
                 setOpenCart(!openCart);
               }}>
               <BsFillCartFill className="cart-btn"/>
-              <p className="item-count">{noOfCartItem}</p>
+              {noOfCartItem>0 && <p className="item-count">{noOfCartItem}</p>}
               </div>
               <AiOutlineLogout onClick={handleLogout} style={{ fontSize: "1.8rem", color: "red",fontWeight:"500" }} />
             </div>

@@ -13,6 +13,7 @@ import { ImCross } from "react-icons/im";
 // recreating the `Stripe` object on every render.
 
 //let key=process.env.REACT_APP_PUBLISHABLE_KEY;
+
 const stripePromise = loadStripe(`${process.env.REACT_APP_PUBLISHABLE_KEY}`);
 
 

@@ -7,9 +7,19 @@
     margin:20px 5px;
     background-color: rgb(237, 247, 255);
     border-color: rgb(166, 230, 255);
-    .faq-question{
-        margin-bottom: 15px;
+    .question-section{
+        display:flex;
+        gap:10px;
+        .accordian-icon{
+            width:45px;
+            height:25px;
+            color:var(--t-primary-300); 
+        }
+        .faq-question{
+            margin-bottom: 15px;
+        }
     }
+    
 
     .faq-answer{
 

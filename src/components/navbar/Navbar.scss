@@ -60,7 +60,8 @@
             width:25px;
             height:25px;
             margin:10px;
-            color: var(--btn-secondary-color);
+            //color: var(--btn-secondary-color);
+            color:var(--t-primium-400);
         }
 
         .item-count{
@@ -76,7 +77,7 @@
             border: 1px solid #000;
             border-radius: 50%;
             color:#fff;
-            background-color:blueviolet;
+            background-color:var(--accent-color);
         }
     }
     }
