@@ -1,6 +1,6 @@
 import React from 'react'
 import "./LPHeroSection.scss"
-import LPHeroImg from "../../assets/LP-Hero-Img.svg"
+import LPHeroImg from "../../assets/hero-img.png"
 import Laptop from "../../assets/Laptop.webp";
 import MobileImg from "../../assets/mobile.webp";
 import ProgressImg from "../../assets/ProgressImg.webp";
