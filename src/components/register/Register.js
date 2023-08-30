@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Register.scss";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { axiosClient } from "../../utils/axiosClient";
 import axios from "axios";
 import { Button, Input, message } from "antd";
@@ -27,7 +27,11 @@ const Register = () => {
 
   const handleSubmit =async (e) => {
     e.preventDefault();
+  // if(!user.firstName || !user.lastName || !user.email || !user.password || !user.mobileNo){
+  //   alert("All Fields are Mandatory:)");
   
+  // }
+  console.log("user",user);
     if(user.password===user.confirmPassword){
       const userData=await axiosClient.post("/auth/register",
       {
@@ -37,7 +41,18 @@ const Register = () => {
         password:user.password.toString(),
         mobileNo:user.mobileNo.toString(),
       });
-      userData.data.statusCode===(200 || 201)?navigate("/login"):navigate("/register");
+      console.log("userData.data.statusCode 1",userData.data.statusCode);
+      
+      if(userData.data.statusCode!==201){
+        alert(userData.data.result);
+      }
+
+      if(userData.data.statusCode===201){
+        console.log("userData.data.statusCode===201",userData.data.statusCode)
+        navigate("/login")
+      }else{
+        navigate("/register")
+      } 
     }else{
       alert("Please use same password for confirm password :)");
     }
@@ -46,7 +61,7 @@ const Register = () => {
   return (
     <div className="container">
       <div className="register">
-        <h2>Register to Coding Shuttle</h2>
+        <h2>Register to Coding <span style={{color:"var(--btn-secondary-color)"}}>Shuttle</span></h2>
         <div className="register-input">
           <label htmlFor="exampleInputFirstName" className="form-label">
             First Name
@@ -145,6 +160,10 @@ const Register = () => {
         >
           Submit
         </Button>
+        <div className='register-end'>
+          <p>Already Register? <Link to="/login" style={{color:"#000",fontWeight:"500"}}>Login</Link></p>
+          <p>Want to go through Coding Shuttle? <Link to="/" style={{color:"#000",fontWeight:"500"}}>Browse</Link></p>
+        </div>
       </div>
     </div>
   );

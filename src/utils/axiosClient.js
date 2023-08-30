@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ACCESS_TOKEN, getItem } from "./localstoragemanager";
 
-let origin = process.env.REACT_APP_SERVER_BASE_URL;
+let origin = process.env.REACT_APP_LOCAL_BASE_URL;
 
 if (process.env.NODE_ENV === "production") {
   origin = process.env.REACT_APP_SERVER_BASE_URL;

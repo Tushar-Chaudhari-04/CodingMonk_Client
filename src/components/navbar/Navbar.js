@@ -28,7 +28,8 @@ const Navbar = () => {
   const noOfCartItem=userCartData.length;
 
   const handleColorChange=()=>{
-    if(window.scrollY>=80){
+    console.log("window.scrollY",window.scrollY);
+    if(window.scrollY>=40){
       setColorChange(true);
     }else{
       setColorChange(false);

@@ -4,7 +4,7 @@
     //border-radius: 20px;
     width:550px;
     height:560px;
-    padding: 35px;
+    padding: 20px;
     transform: translate(55%, -10%);
     margin-top: -30px;
     h2{
@@ -16,12 +16,12 @@
         flex-direction: column;
 
         .form-label {
-          margin: 5px;
-          padding: 5px;
+          margin: 3px;
+          padding: 3px;
         }
         .form-control {
           width: 90%;
-          padding: 7px;
+          padding: 5px;
           border: 1.5px solid #000;
           border-radius: 5px;
         }
@@ -35,6 +35,15 @@
         margin-top: 15px;
         margin-left: 110px;
         padding: 12px;
+      }
+      .register-end{
+        margin-top:10px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        p{
+         
+        }
       }
     }
   }

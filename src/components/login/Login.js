@@ -27,7 +27,11 @@ const Login = () => {
         email:user.email.toString(),
         password:user.password.toString(),
       });
-   
+      
+      if(userData.data.statusCode!==(200 || 201)){
+        alert(userData.data.result);
+      }
+
       setItem(USER,userData?.data?.result);
       setItem(ACCESS_TOKEN, userData?.data?.result?.accessToken);
       userData.data.statusCode===(200 || 201)?navigate("/"):navigate("/login");
@@ -39,7 +43,7 @@ const Login = () => {
   return (
     <div className="container">
       <div className="login">
-        <h2>Login to Coding Shuttle</h2>
+        <h2>Login to Coding <span style={{color:"var(--btn-secondary-color)"}}>Shuttle</span></h2>
         <div class="login-input">
           <label for="exampleInputEmail1" class="form-label">
             Email address
@@ -73,6 +77,10 @@ const Login = () => {
         <button onClick={handleSubmit}  type="submit" class="btn-primary submit-btn">
           Submit
         </button>
+        <div className='login-end'>
+          <p>Do not have an account? <Link to="/register" style={{color:"#000",fontWeight:"500"}}>Register</Link></p>
+          <p>Want to go through Coding Shuttle? <Link to="/" style={{color:"#000",fontWeight:"500"}}>Browse</Link></p>
+        </div>
         {/* <p>Not a Member?<Link to='/register' ></Link></p>
         <Link to="/register" ><span style={{color:"000"}}>Sign Up Now</span></Link> */}
         

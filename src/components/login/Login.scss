@@ -3,7 +3,7 @@
       border:1px solid #000;
       border-radius: 20px;
       width:550px;
-      height:300px;
+      height:350px;
       padding: 30px;
       transform: translate(55%, 0%);
       
@@ -26,7 +26,7 @@
             border-radius: 5px;
           }
         }
-  
+        
         .submit-btn {
           justify-content: center;
           align-items: center;
@@ -34,6 +34,16 @@
           margin-top: 10px;
           margin-left: 110px;
           padding: 12px;
+        }
+
+        .login-end{
+          margin-top:10px;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          p{
+           
+          }
         }
       }
     }
