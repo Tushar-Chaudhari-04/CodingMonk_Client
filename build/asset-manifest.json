@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.8c10a037.css",
-    "main.js": "/static/js/main.6487011c.js",
-    "static/media/LP-Hero-Img.svg": "/static/media/LP-Hero-Img.b5cb887c796ee4266bb74427f512afb9.svg",
+    "main.js": "/static/js/main.f3170d44.js",
     "static/media/anuj-bhaiya.webp": "/static/media/anuj-bhaiya.63a6af52ee6f42718d62.63a6af52ee6f42718d62.webp",
+    "static/media/LP-Hero-Img.png": "/static/media/LP-Hero-Img.3dff958d6f440431d65f.png",
     "static/media/MERN Img.jpg": "/static/media/MERN Img.2a7a16bc015cf5094bbb.jpg",
     "static/media/pagenotfound.png": "/static/media/pagenotfound.af53d1200c9700655ff0.png",
     "static/media/Prime Program.png": "/static/media/Prime Program.174a6bade4bf4558e5e7.png",
@@ -25,10 +25,10 @@
     "static/media/Shubham Kumar.webp": "/static/media/Shubham Kumar.9a5dba62d21be3ee2fa6.9a5dba62d21be3ee2fa6.webp",
     "index.html": "/index.html",
     "main.8c10a037.css.map": "/static/css/main.8c10a037.css.map",
-    "main.6487011c.js.map": "/static/js/main.6487011c.js.map"
+    "main.f3170d44.js.map": "/static/js/main.f3170d44.js.map"
   },
   "entrypoints": [
     "static/css/main.8c10a037.css",
-    "static/js/main.6487011c.js"
+    "static/js/main.f3170d44.js"
   ]
 }
