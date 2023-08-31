@@ -1,0 +1,19 @@
+.container{
+    .courses{
+        margin-top:15%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        h1{
+            text-align:center;
+            font-size: 2.5rem;
+        }
+
+        .courses-card{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}

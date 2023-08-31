@@ -1,0 +1,15 @@
+.testimonialsCard{
+    width:350px;
+    border:1px solid #000;
+    border-radius: 20px;
+    margin:15px;
+    padding: 10px;
+    background-color: rgb(255, 247, 212);
+    border-color: rgb(255, 233, 160);
+    .testimonial-top{
+        .testimonial-top-img{
+            width:100px;
+            border-radius: 50%;
+        }
+    }
+}

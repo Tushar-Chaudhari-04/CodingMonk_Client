@@ -1,0 +1,44 @@
+.container {
+  .coursemainsection {
+    .coursemainhero {
+        width:80vw;
+        display: flex;
+        
+        .coursemainhero-left {
+        width:50vw;
+        h4{
+            font-size: 1.5rem;
+            padding:5px;
+        }
+
+        h1{
+            font-size: 3rem;
+            padding:5px;
+        }
+
+        p{
+            font-size:20px;
+            padding:5px;
+        }
+    }
+      .coursemainhero-right {
+        margin-top: -50px;
+        margin-left: 12%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .coursemaindetails{
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .course-main-info-section{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.faqs{
+    margin-top:150%;
+    width:100vw;
+    
+    h2{
+        font-size: 2.5rem;
+    }
+
+    .faq-card-section{
+        margin-top:40px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
