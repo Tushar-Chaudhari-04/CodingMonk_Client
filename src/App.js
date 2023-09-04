@@ -39,6 +39,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home />} />
+         
           <Route path="/courses/:course" element={<CourseSection />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
@@ -48,3 +49,5 @@ function App() {
 }
 
 export default App;
+
+{/* <Route path="/CodingMonk_Client" element={<Home />} /> */}
