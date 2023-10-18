@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useLayoutEffect } from 'react'
 import "./Home.scss"
 import Navbar from '../../components/navbar/Navbar'
 import LPHeroSection from '../../components/lp-hero-section/LPHeroSection'
@@ -13,6 +13,15 @@ import About from '../../components/about/About'
 import { useDispatch, useSelector } from 'react-redux'
 import CheckoutScetion from '../checkout-section/CheckoutSection'
 import { getMyProfile } from '../../redux/slice/UserSlice';
+import {
+  BrowserRouter,
+  Link,
+  Outlet,
+  useRoutes,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 
 const Home = () => {
   const dispatch=useDispatch();
@@ -20,6 +29,11 @@ const Home = () => {
     dispatch(getMyProfile());
   }, [])
   
+  const location = useLocation();
+  // Scroll to top if path changes
+  useLayoutEffect(() => {
+    window && window.scrollTo(0, 0);
+  }, [location.pathname]);
   return (
     <>
         <Navbar/>

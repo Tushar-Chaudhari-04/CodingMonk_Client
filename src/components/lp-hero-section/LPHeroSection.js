@@ -1,6 +1,7 @@
 import React from 'react'
 import "./LPHeroSection.scss"
 import LPHeroImg from "../../assets/LP-Hero-Img.png"
+import LPHeroStaticImg from "../../assets/hero section/LP Hero Img.PNG"
 import Laptop from "../../assets/Laptop.webp";
 import MobileImg from "../../assets/mobile.webp";
 import ProgressImg from "../../assets/ProgressImg.webp";
@@ -15,6 +16,7 @@ const LPHeroSection = () => {
     <div className='container'>
         <div className='hero-section-left'>
             {/* <h1>Learn with Tushar Chaudhari</h1> */}
+            {console.log("Hi Tushar")}
             <h1 className='hero-heading'><span className='hero-heading-prime'>Prime</span>Program is now Open for Enrollments</h1>
             <h2 className='hero-head-two'>The Ultimate Guide To Ace SDE Interviews.</h2>
             <h3 className='hero-subheading'>A Program to make you Job Ready for your Dream Company 🚀</h3>
@@ -26,13 +28,13 @@ const LPHeroSection = () => {
         </div>
         <div className='hero-section-right'>
         <div className='hero-section-si'>
-            <img className='laptop-img vert-move' src={Laptop} alt=""/>
+            {/* <img className='laptop-img vert-move' src={Laptop} alt=""/>
             <img className='progress-img vert-move' src={ProgressImg} alt=""/>
-            <img className='mobile-img vert-move' src={MobileImg} alt=""/>
+            <img className='mobile-img vert-move' src={MobileImg} alt=""/> */}
             
         </div>
         <div className='hero-section-hi'>
-        <img className='lpheroimg' src={LPHeroImg} alt="LPHeroImg"/>
+        <img className='lpheroimg' src={LPHeroStaticImg} alt="LPHeroImg"/>
         </div>   
            
         </div>

@@ -1,8 +1,9 @@
 import React from "react";
 import "./Footer.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = (data) => {
+  const navigate=useNavigate();
   const currDate = new Date();
   const year = currDate.getFullYear();
   return (
@@ -10,7 +11,7 @@ const Footer = (data) => {
       <h1 className="footer-heading">
         Skills Gets You The Job, Not Your Degree.
       </h1>
-      <button className="btn-primary footer-btn" id="#course">
+      <button className="btn-primary footer-btn" id="#course" onClick={()=>navigate("/#course")}>
       <a href="#course">Apply Now</a></button>
       <div className="footer-tail">
         <div className="footer-tail-left">

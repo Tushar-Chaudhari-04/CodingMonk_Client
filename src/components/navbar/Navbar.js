@@ -9,6 +9,7 @@ import {
   Routes,
   Route,
   useNavigate,
+  useParams,
 } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
 import { ACCESS_TOKEN, USER, getItem, removeItem } from "../../utils/localstoragemanager";
@@ -19,6 +20,7 @@ import CheckoutScetion from "../../pages/checkout-section/CheckoutSection";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const params=useParams();
   const [colorChange,setColorChange]=useState(false);
   const [openCart, setOpenCart] = useState(false);
 
@@ -50,10 +52,10 @@ const Navbar = () => {
     navigate("/login");
   }
 
-
+  console.log("nav params",params.course);
   return (
     <>
-    <nav className="navbar" style={{backgroundColor:colorChange?"#fff":""}}>
+    <nav className="navbar" style={{backgroundColor:colorChange?"#fff":"",justifyContent:!params.course?"space-around":"",}} >
       <div className="navbar-left">
         <Link to="/">
           <svg
@@ -165,7 +167,9 @@ const Navbar = () => {
           </svg>
         </Link>
       </div>
-      <div className="navbar-center">
+      
+      {!params.course &&
+        <div className="navbar-center">
         <ul className="cb-tabs">
           {/* <li>
             <Link className="tab1" to="/courses">
@@ -194,6 +198,8 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+      }
+
 
       <div className="navbar-right">
         {!user?.firstName && (
